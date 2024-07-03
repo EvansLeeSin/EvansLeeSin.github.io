@@ -1,12 +1,8 @@
 ---
 title: 关于Hexo拉取Git部署的笔记
 date: 2024-07-03 17:00:14
-tags:hexo
+tags:
 ---
-
-
-
-Hexo
 
 #### 关于首次将Hexo部署到本地，并提交至GitHub
 
