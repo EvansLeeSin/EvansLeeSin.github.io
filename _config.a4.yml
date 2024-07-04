@@ -23,11 +23,11 @@ showInMenu:  # menu 中的哪些页面显示在首页中（“首页”必定显
 index:  # 首页相关配置
   header:  # 首页的页眉 以及 404页面，当你没开启一言，将会每次刷新页面随机展示下面的语句
     #- "我忘明月很久，明月始终望我"
-    #- "人山人海，人来人往"
+    - "人山人海，人来人往"
     #- "看过大海的人不会忘记海的广阔"
     # ...
   hitokoto: false # 一言：调用网络语句展示的接口
-  footer: Email:123456789@gmail.com # 除了可以填写任何文字外，可以自动邮箱链接化，但需按照这个格式填写：Email:xxx@gmail.com
+  footer: Email:qjy2499722895@gmail.com # 除了可以填写任何文字外，可以自动邮箱链接化，但需按照这个格式填写：Email:xxx@gmail.com
   titlePosition: left # center | left  # 首页标题的位置
 
 footerLink: # 底部的链接自定义
@@ -44,7 +44,7 @@ post: #除首页之外页面
   endContent: 以上 # 当你使用了 评论功能，此配置才会生效
 
 # 相对于source目录下的头像url
-favicon: /img/favicon.webp
+favicon: /img/favicon.jpg
 
 # 是否启用一些特色工具 false | true
 tool:
@@ -73,7 +73,7 @@ cdn:
 # 注：颜色代码需加“#”，颜色单词不需要加“#”
 # 更多A4色调搭配推荐：https://ninojay.top/hexoplugin/A4-color-change/
 color: 
-  enable: false # true | false 
+  enable: true # true | false 
   font: "#9e5345" # 字体颜色
   background: "#e8e0c9" # 最底部层背景颜色
   indexBackGround: "#efeae2" # 首页层颜色
