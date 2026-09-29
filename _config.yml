@@ -5,8 +5,8 @@
 # Site
 title: Evans
 subtitle: ''
-description: ''
-keywords:
+description: Evans 的技术笔记，记录 Java 工程、AI Agent、RAG 与值得关注的 AI 动态。
+keywords: Java, AI Agent, RAG, AI 动态
 author: Evans
 language: zh-CN
 timezone: Asia/Shanghai
