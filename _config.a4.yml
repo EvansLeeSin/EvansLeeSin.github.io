@@ -1,0 +1,125 @@
+# ‘首页’ 和 ‘文章’ 较为 特殊
+# 目前如果你想修改 ‘文章’ 为 其他别名，记得去_config.yml中把，menu和showInMenu中的 '文章' 都也同步修改，或者注释掉，否则会产生影响
+menu:
+  首页: /  #需要hexo new page index,在index/index.md填写的内容将会展现在首页上
+  文章: /list/ # 需要hexo new page list
+  # 添加其他页面格式举例：
+  # 关于: /about/ # 需要hexo new page about
+  # 标签: /tags/ #需要hexo new page tags
+  # 分类: /categories/ # 需要hexo new page categories
+  # ...
+
+# 首页你想要展示的menu链接，注意当你修改了menu中的别名，这里要随着更改，不然你会疑惑怎么首页没有修改后的别名
+showInMenu:  # menu 中的哪些页面显示在首页中（“首页”必定显示）
+  - 文章  # 将在首页显示 文章 链接
+  # - 关于
+  # - 标签
+  # - 分类
+
+# 因为 最终 页面的生成 会取 _config.a4.yml 和 _config.yml 的并集
+# 所以当你复制了一份该配置文件为 _config.a4.yml后，强烈建议你将 _config.yml 中的 menu,showInMenu中的配置都 注释掉
+# 甚至可以注释掉 _config.yml中所有的配置，这样最终只会基于你的 _config.a4.yml
+
+index:  # 首页相关配置
+  header:  # 首页的页眉 以及 404页面，当你没开启一言，将会每次刷新页面随机展示下面的语句
+    #- "我忘明月很久，明月始终望我"
+    - "人山人海，人来人往"
+    #- "看过大海的人不会忘记海的广阔"
+    # ...
+  hitokoto: false # 一言：调用网络语句展示的接口
+  footer: Email:qjy2499722895@gmail.com # 除了可以填写任何文字外，可以自动邮箱链接化，但需按照这个格式填写：Email:xxx@gmail.com
+  titlePosition: left # center | left  # 首页标题的位置
+
+footerLink: # 底部的链接自定义
+  info: © 1949-2024 China  # info这个单词不能修改，不想使用可为空
+  # 添加链接格式 举例
+  # 友链: /friends/ # 需要hexo new page friends
+  # 联系: /contact/ # 需要hexo new page contact
+  # 支持: /support/ # 需要hexo new page support
+  # ...
+
+post: #除首页之外页面
+  footer: 🌊看过大海的人不会忘记海的广阔🌊   # 底部左侧 自定义信息
+  themeInfo: true # true | false  # 是否开启 底部右侧 声明本站信息
+  endContent: 以上 # 当你使用了 评论功能，此配置才会生效
+
+# 相对于source目录下的头像url
+favicon: /img/favicon.jpg
+
+# 是否启用一些特色工具 false | true
+tool:
+  darkMode: true # 暗黑模式
+  returnToTop: true # 回到顶部按钮 
+  returnToLast: true # 回退页面按钮
+  topToc: true # 文章顶部目录
+  leftToc: true # 文章左侧目录 目前仅支持大屏幕浮现
+
+# ---------------------------------------------------------------------------------------
+# 以上为基本配置，实现了A4主题追求的纯净风
+# 
+# 以下为 非必要不必更改的配置
+#
+# ps：还有经过A4作者测试，可供你使用的插件，详见：https://ninojay.top/tags/hexoPlugin/
+# ---------------------------------------------------------------------------------------
+
+# 你可能会用到的 https://ninojay.top/2023/website-cdn/
+cdn:
+  enable: false # 如果你修改了 css/js ，也许需要把cdn设置为false才会生效
+  choose: jsdelivr  # aliyun | unpkg| jsdelivr  # 都调整为利于国内的cdn，建议使用默认的 jsdelivr 即可
+  # 因为是免费CDN，所以有挂的风险，一旦发现网站样式出现原来没有的问题，请尝试关闭CDN
+
+# 实验性功能：A4色调调整：颜色搭配是很主观的行为
+# 设置为 false 为 A4 默认灰白色调，可设置为 true 直接启动 体验下 另一种护眼预置色调
+# 注：颜色代码需加“#”，颜色单词不需要加“#”
+# 更多A4色调搭配推荐：https://ninojay.top/hexoplugin/A4-color-change/
+color: 
+  enable: true # true | false 
+  font: "#9e5345" # 字体颜色
+  background: "#e8e0c9" # 最底部层背景颜色
+  indexBackGround: "#efeae2" # 首页层颜色
+  postBackGround: "#efeae2" # 文章页层颜色
+  codeBackGround: "#e8e0c9" # 代码块背景颜色
+  codeFont: "#2e5041" # 代码块字体颜色 
+  linkBeforeClick: "#2e5041" # 链接点击前的颜色
+  linkAfterClick: "#9c9caf" # 链接点击后的颜色
+
+# A4背景引入图片
+# 图片你应该先放到 source下，下面选项的图片路径 即为 相对于 source 目录的路径
+imageShow:
+  enable: false
+  background: /img/favicon.webp # 最底部层背景
+
+# A4默认中文使用霞鹜文楷，如果你想关闭这种字体，首先保证enable为 true 接着可以开关对应字体
+font:
+  enable: false # 是否使用字体开关功能
+  LXGWWenKai: true # 霞鹜文楷 如果关闭，中文则使用的是 思源宋体，思源宋体不提供关闭 
+
+# ---------------------------------------------------------------------------------------
+# Comment plugin
+# 评论插件：需要根据教程自行部署评论服务
+# ---------------------------------------------------------------------------------------
+comment:
+  enable: false 
+  use: waline # values: waline、twikoo、artalk
+
+  # Waline
+  # See: https://waline.js.org/guide/get-started.html
+  waline:
+    serverUrl:  # Waline server url(vercel) example: https://example.example.com
+    lang: zh-CN # Waline language, default: zh-CN. See: https://waline.js.org/guide/client/i18n.html
+    placeholder: 留下你的评论吧。 # 评论框背景信息
+
+  # Twikoo
+  # See: https://twikoo.js.org/quick-start.html
+  twikoo:
+    envId:  # 腾讯云环境填 envId；其它环境填地址
+    region:  # 环境地域，默认为 ap-shanghai，腾讯云环境填 ap-shanghai 或 ap-guangzhou；其它环境不填
+    lang:  # 用于手动设定评论区语言，支持的语言列表 https://github.com/imaegoo/twikoo/blob/main/src/client/utils/i18n/index.js
+
+
+  # Artalk
+  # See: https://artalk.js.org/guide/deploy.html
+  artalk:
+    server:  # Artalk 后端地址
+
+version: v1.9.0
