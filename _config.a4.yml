@@ -202,7 +202,7 @@ comment:
     server:  # Artalk 后端地址
 
 inject:
-  # css: css/custom.css # 找到该文件后，编写你的css样式，每个页面都会自动引入（当前未使用，注释掉以避免引用不存在的文件）
+  css: css/custom.css # 须保留此项：主题自带 source/css/custom.css，head.ejs 会直接读 theme.inject.css，整段注释掉会导致所有页面渲染失败出空白页；如需自定义样式，在站点 source/css/custom.css 中写真实规则（会覆盖主题自带文件）
 
 # 在<head>增加一个<base>元素，仅限有特殊需求者使用：https://developer.mozilla.org/zh-CN/docs/Web/HTML/Reference/Elements/base
 baseElement:
