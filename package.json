@@ -8,10 +8,10 @@
     "server": "hexo server"
   },
   "hexo": {
-    "version": "7.3.0"
+    "version": "8.1.2"
   },
   "dependencies": {
-    "hexo": "^7.0.0",
+    "hexo": "8.1.2",
     "hexo-all-minifier": "^0.5.7",
     "hexo-deployer-git": "^4.0.0",
     "hexo-generator-archive": "^2.0.0",
